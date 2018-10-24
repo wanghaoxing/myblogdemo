@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "RayBlog": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:6001;http://localhost:6000",
+      "launchUrl": "http://localhost:6000/api/posts",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

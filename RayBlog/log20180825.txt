@@ -1,0 +1,1757 @@
+2018-08-25 00:13:21.452 +08:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2018-08-25 00:13:22.223 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:13:22.357 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Any()'
+2018-08-25 00:13:22.447 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Any()'
+2018-08-25 00:13:22.648 +08:00 [DBG] (QueryContext queryContext) => IEnumerable<bool> _InterceptExceptions(
+    source: IEnumerable<bool> _ToSequence(() => bool GetResult(
+            valueBuffers: IEnumerable<ValueBuffer> _Query(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT CASE
+                        WHEN EXISTS (
+                            SELECT 1
+                            FROM [Posts] AS [p])
+                        THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                    END), 
+            throwOnNullResult: False)), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:13:22.705 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:22.782 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:22.843 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Posts] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-08-25 00:13:22.877 +08:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Posts] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-08-25 00:13:22.912 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:13:22.913 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:22.917 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:22.920 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:13:22.928 +08:00 [DBG] Hosting starting
+2018-08-25 00:13:22.989 +08:00 [INF] User profile is available. Using 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-25 00:13:22.997 +08:00 [DBG] Reading data from file 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys\key-73484aa6-e8f7-4802-a9b5-38bb7db19515.xml'.
+2018-08-25 00:13:23.016 +08:00 [DBG] Reading data from file 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys\key-c851040d-9ce1-4a71-9adc-d84f3795dc9c.xml'.
+2018-08-25 00:13:23.031 +08:00 [DBG] Found key "73484aa6-e8f7-4802-a9b5-38bb7db19515".
+2018-08-25 00:13:23.038 +08:00 [DBG] Found key "c851040d-9ce1-4a71-9adc-d84f3795dc9c".
+2018-08-25 00:13:23.057 +08:00 [DBG] Considering key "73484aa6-e8f7-4802-a9b5-38bb7db19515" with expiration date "2018-09-28T07:01:33.1620695+00:00" as default key.
+2018-08-25 00:13:23.075 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-08-25 00:13:23.078 +08:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-08-25 00:13:23.082 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-08-25 00:13:23.085 +08:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-08-25 00:13:23.090 +08:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-08-25 00:13:23.098 +08:00 [DBG] Using key "73484aa6-e8f7-4802-a9b5-38bb7db19515" as the default key.
+2018-08-25 00:13:23.099 +08:00 [DBG] Key ring with default key "73484aa6-e8f7-4802-a9b5-38bb7db19515" was loaded during application startup.
+2018-08-25 00:13:23.132 +08:00 [DBG] Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value false
+2018-08-25 00:13:23.175 +08:00 [DBG] Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value false
+2018-08-25 00:13:23.176 +08:00 [DBG] Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value false
+2018-08-25 00:13:23.178 +08:00 [DBG] Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value false
+2018-08-25 00:13:23.179 +08:00 [DBG] Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value "AllExceptions"
+2018-08-25 00:13:23.181 +08:00 [DBG] Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value false
+2018-08-25 00:13:23.204 +08:00 [DBG] Compatibility switch AllowAreas in type RazorPagesOptions is using default value false
+2018-08-25 00:13:23.206 +08:00 [DBG] Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value false
+2018-08-25 00:13:23.226 +08:00 [DBG] Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value false
+2018-08-25 00:13:23.267 +08:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2018-08-25 00:13:23.315 +08:00 [DBG] Failed to locate the development https certificate at 'null'.
+2018-08-25 00:13:23.396 +08:00 [DBG] Using development certificate: CN=localhost (Thumbprint: D30E946E0AD126EEA5F9A35F1B7DB97F0FE3D2EA)
+2018-08-25 00:13:23.448 +08:00 [DBG] Hosting started
+2018-08-25 00:13:23.450 +08:00 [DBG] Loaded hosting startup assembly RayBlog.APi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2018-08-25 00:13:23.804 +08:00 [DBG] Connection id "0HLG9RI26576F" started.
+2018-08-25 00:13:23.845 +08:00 [DBG] Connection id "0HLG9RI26576F" received FIN.
+2018-08-25 00:13:23.852 +08:00 [DBG] Connection id "0HLG9RI26576F" sending FIN.
+2018-08-25 00:13:23.861 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-08-25 00:13:23.943 +08:00 [DBG] Connection id "0HLG9RI26576F" stopped.
+2018-08-25 00:13:27.473 +08:00 [DBG] Connection id "0HLG9RI26576G" started.
+2018-08-25 00:13:28.087 +08:00 [DBG] Connection id "0HLG9RI26576H" started.
+2018-08-25 00:13:28.223 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts  
+2018-08-25 00:13:28.241 +08:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2018-08-25 00:13:28.274 +08:00 [DBG] Redirecting to 'https://localhost:5001/api/posts'.
+2018-08-25 00:13:28.284 +08:00 [DBG] Connection id "0HLG9RI26576H" completed keep alive response.
+2018-08-25 00:13:28.289 +08:00 [INF] Request finished in 66.2777ms 307 
+2018-08-25 00:13:28.295 +08:00 [DBG] Connection id "0HLG9RI26576I" started.
+2018-08-25 00:13:28.311 +08:00 [DBG] Connection id "0HLG9RI26576J" started.
+2018-08-25 00:13:28.493 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts  
+2018-08-25 00:13:28.809 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:13:28.878 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '71129b51-34f8-49db-9402-07bd7f5c12d6' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:13:28.955 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:13:28.958 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:13:28.960 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:13:28.962 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:13:28.968 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:13:28.973 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:13:29.067 +08:00 [DBG] Attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters' ...
+2018-08-25 00:13:29.069 +08:00 [DBG] Attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name '' in request data ...
+2018-08-25 00:13:29.083 +08:00 [DBG] Could not find a value in the request with name 'Title' for binding property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:13:29.085 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:13:29.089 +08:00 [DBG] Could not find a value in the request with name 'PageIndex' for binding property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:13:29.090 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:13:29.092 +08:00 [DBG] Could not find a value in the request with name 'PageSize' for binding property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:13:29.093 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:13:29.095 +08:00 [DBG] Could not find a value in the request with name 'OrderBy' for binding property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:13:29.099 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:13:29.100 +08:00 [DBG] Could not find a value in the request with name 'Fields' for binding property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:13:29.103 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:13:29.104 +08:00 [DBG] Done attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name ''.
+2018-08-25 00:13:29.106 +08:00 [DBG] Done attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters'.
+2018-08-25 00:13:29.133 +08:00 [INF] Executing action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) with arguments (["RayBlog.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2018-08-25 00:13:29.166 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:13:29.178 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Count()'
+2018-08-25 00:13:29.183 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Count()'
+2018-08-25 00:13:29.233 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<int> _InterceptExceptions(
+    source: IAsyncEnumerable<int> _ToSequence(() => Task<int> GetResult(
+            valueBuffers: IAsyncEnumerable<ValueBuffer> _Query(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT COUNT(*)
+                    FROM [Posts] AS [p]), 
+            throwOnNullResult: False, 
+            cancellationToken: queryContext.CancellationToken)), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:13:29.286 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:29.289 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:29.303 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:13:29.324 +08:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:13:29.342 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:13:29.343 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:29.345 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:29.378 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_2 in DbSet<Post>
+select [<generated>_2])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:13:29.384 +08:00 [WRN] Query: '(from Post <generated>_2 in DbSet<Post> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2018-08-25 00:13:29.392 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_2 in DbSet<Post>
+select [<generated>_2])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:13:29.455 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<Post> _InterceptExceptions(
+    source: IAsyncEnumerable<Post> _TrackEntities(
+        results: IAsyncEnumerable<Post> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+                FROM [Posts] AS [p]
+                ORDER BY (SELECT 1)
+                OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY, 
+            shaper: UnbufferedEntityShaper<Post>), 
+        queryContext: queryContext, 
+        entityTrackingInfos: { itemType: Post }, 
+        entityAccessors: List<Func<Post, object>> 
+        { 
+            Func<Post, Post>, 
+        }
+    ), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:13:29.483 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:29.484 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:29.499 +08:00 [DBG] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:13:29.511 +08:00 [INF] Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:13:29.588 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:29.643 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:29.645 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:29.649 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:29.651 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:29.652 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:29.656 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:29.659 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:29.660 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:29.666 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:29.668 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:13:29.669 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:29.670 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:29.830 +08:00 [INF] Executed action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 690.1186ms.
+2018-08-25 00:13:29.859 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2018-08-25 00:13:29.873 +08:00 [DBG] No information found on request to perform content negotiation.
+2018-08-25 00:13:29.875 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2018-08-25 00:13:29.877 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2018-08-25 00:13:29.879 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+2018-08-25 00:13:29.883 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2018-08-25 00:13:29.938 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 888.9393ms
+2018-08-25 00:13:29.999 +08:00 [DBG] Connection id "0HLG9RI26576J" completed keep alive response.
+2018-08-25 00:13:30.008 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:13:30.012 +08:00 [INF] Request finished in 1518.9011ms 200 application/json; charset=utf-8
+2018-08-25 00:13:38.036 +08:00 [DBG] Connection id "0HLG9RI26576G" received FIN.
+2018-08-25 00:13:38.043 +08:00 [DBG] Connection id "0HLG9RI26576G" disconnecting.
+2018-08-25 00:13:38.045 +08:00 [DBG] Connection id "0HLG9RI26576G" sending FIN.
+2018-08-25 00:13:38.049 +08:00 [DBG] Connection id "0HLG9RI26576G" stopped.
+2018-08-25 00:13:47.610 +08:00 [DBG] Connection id "0HLG9RI26576K" started.
+2018-08-25 00:13:47.628 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=3&orderBy=author,id%20desc&fields=id,title  
+2018-08-25 00:13:47.630 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:13:47.632 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '71129b51-34f8-49db-9402-07bd7f5c12d6' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:13:47.635 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:13:47.639 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:13:47.642 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:13:47.644 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:13:47.646 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:13:47.647 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:13:47.651 +08:00 [DBG] Attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters' ...
+2018-08-25 00:13:47.656 +08:00 [DBG] Attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name '' in request data ...
+2018-08-25 00:13:47.658 +08:00 [DBG] Could not find a value in the request with name 'Title' for binding property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:13:47.660 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:13:47.662 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32' using the name 'PageIndex' in request data ...
+2018-08-25 00:13:47.664 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:13:47.666 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32' using the name 'PageSize' in request data ...
+2018-08-25 00:13:47.668 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:13:47.673 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String' using the name 'OrderBy' in request data ...
+2018-08-25 00:13:47.674 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:13:47.676 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String' using the name 'Fields' in request data ...
+2018-08-25 00:13:47.677 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:13:47.678 +08:00 [DBG] Done attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name ''.
+2018-08-25 00:13:47.681 +08:00 [DBG] Done attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters'.
+2018-08-25 00:13:47.683 +08:00 [INF] Executing action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) with arguments (["RayBlog.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2018-08-25 00:13:47.691 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:13:47.768 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_3 in DbSet<Post>
+order by [<generated>_3].Id desc
+order by [<generated>_3].Author asc
+select [<generated>_3]).Count()'
+2018-08-25 00:13:47.771 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_3 in DbSet<Post>
+select [<generated>_3]).Count()'
+2018-08-25 00:13:47.774 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<int> _InterceptExceptions(
+    source: IAsyncEnumerable<int> _ToSequence(() => Task<int> GetResult(
+            valueBuffers: IAsyncEnumerable<ValueBuffer> _Query(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT COUNT(*)
+                    FROM [Posts] AS [p]), 
+            throwOnNullResult: False, 
+            cancellationToken: queryContext.CancellationToken)), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:13:47.777 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:47.779 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:47.780 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:13:47.782 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:13:47.786 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:13:47.787 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:47.789 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:47.792 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_4 in DbSet<Post>
+order by [<generated>_4].Id desc
+order by [<generated>_4].Author asc
+select [<generated>_4])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:13:47.806 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_4 in DbSet<Post>
+order by [<generated>_4].Id desc
+order by [<generated>_4].Author asc
+select [<generated>_4])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:13:47.827 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<Post> _InterceptExceptions(
+    source: IAsyncEnumerable<Post> _TrackEntities(
+        results: IAsyncEnumerable<Post> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+                FROM [Posts] AS [p]
+                ORDER BY [p].[Author], [p].[Id] DESC
+                OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY, 
+            shaper: UnbufferedEntityShaper<Post>), 
+        queryContext: queryContext, 
+        entityTrackingInfos: { itemType: Post }, 
+        entityAccessors: List<Func<Post, object>> 
+        { 
+            Func<Post, Post>, 
+        }
+    ), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:13:47.829 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:47.830 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:47.831 +08:00 [DBG] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY [p].[Author], [p].[Id] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:13:47.835 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY [p].[Author], [p].[Id] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:13:47.841 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:47.842 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:47.843 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:13:47.844 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:13:47.845 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:47.846 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:13:47.858 +08:00 [INF] Executed action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 173.44740000000002ms.
+2018-08-25 00:13:47.861 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2018-08-25 00:13:47.866 +08:00 [DBG] Attempting to select an output formatter based on Accept header '["application/json"]'.
+2018-08-25 00:13:47.869 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+2018-08-25 00:13:47.870 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2018-08-25 00:13:47.873 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 224.615ms
+2018-08-25 00:13:47.875 +08:00 [DBG] Connection id "0HLG9RI26576K" completed keep alive response.
+2018-08-25 00:13:47.878 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:13:47.879 +08:00 [INF] Request finished in 251.4248ms 200 application/json; charset=utf-8
+2018-08-25 00:18:22.926 +08:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2018-08-25 00:18:23.681 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:18:23.781 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Any()'
+2018-08-25 00:18:23.829 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Any()'
+2018-08-25 00:18:23.990 +08:00 [DBG] (QueryContext queryContext) => IEnumerable<bool> _InterceptExceptions(
+    source: IEnumerable<bool> _ToSequence(() => bool GetResult(
+            valueBuffers: IEnumerable<ValueBuffer> _Query(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT CASE
+                        WHEN EXISTS (
+                            SELECT 1
+                            FROM [Posts] AS [p])
+                        THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                    END), 
+            throwOnNullResult: False)), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:18:24.033 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:24.116 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:24.170 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Posts] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-08-25 00:18:24.191 +08:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Posts] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-08-25 00:18:24.227 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:18:24.230 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:24.233 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:24.237 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:18:24.246 +08:00 [DBG] Hosting starting
+2018-08-25 00:18:24.418 +08:00 [INF] User profile is available. Using 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-25 00:18:24.429 +08:00 [DBG] Reading data from file 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys\key-73484aa6-e8f7-4802-a9b5-38bb7db19515.xml'.
+2018-08-25 00:18:24.452 +08:00 [DBG] Reading data from file 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys\key-c851040d-9ce1-4a71-9adc-d84f3795dc9c.xml'.
+2018-08-25 00:18:24.465 +08:00 [DBG] Found key "73484aa6-e8f7-4802-a9b5-38bb7db19515".
+2018-08-25 00:18:24.469 +08:00 [DBG] Found key "c851040d-9ce1-4a71-9adc-d84f3795dc9c".
+2018-08-25 00:18:24.485 +08:00 [DBG] Considering key "73484aa6-e8f7-4802-a9b5-38bb7db19515" with expiration date "2018-09-28T07:01:33.1620695+00:00" as default key.
+2018-08-25 00:18:24.500 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-08-25 00:18:24.506 +08:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-08-25 00:18:24.511 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-08-25 00:18:24.515 +08:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-08-25 00:18:24.519 +08:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-08-25 00:18:24.528 +08:00 [DBG] Using key "73484aa6-e8f7-4802-a9b5-38bb7db19515" as the default key.
+2018-08-25 00:18:24.530 +08:00 [DBG] Key ring with default key "73484aa6-e8f7-4802-a9b5-38bb7db19515" was loaded during application startup.
+2018-08-25 00:18:24.564 +08:00 [DBG] Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value false
+2018-08-25 00:18:24.612 +08:00 [DBG] Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value false
+2018-08-25 00:18:24.614 +08:00 [DBG] Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value false
+2018-08-25 00:18:24.616 +08:00 [DBG] Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value false
+2018-08-25 00:18:24.617 +08:00 [DBG] Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value "AllExceptions"
+2018-08-25 00:18:24.619 +08:00 [DBG] Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value false
+2018-08-25 00:18:24.647 +08:00 [DBG] Compatibility switch AllowAreas in type RazorPagesOptions is using default value false
+2018-08-25 00:18:24.648 +08:00 [DBG] Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value false
+2018-08-25 00:18:24.668 +08:00 [DBG] Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value false
+2018-08-25 00:18:24.698 +08:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2018-08-25 00:18:24.748 +08:00 [DBG] Failed to locate the development https certificate at 'null'.
+2018-08-25 00:18:24.830 +08:00 [DBG] Using development certificate: CN=localhost (Thumbprint: D30E946E0AD126EEA5F9A35F1B7DB97F0FE3D2EA)
+2018-08-25 00:18:24.893 +08:00 [DBG] Hosting started
+2018-08-25 00:18:24.895 +08:00 [DBG] Loaded hosting startup assembly RayBlog.APi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2018-08-25 00:18:25.363 +08:00 [DBG] Connection id "0HLG9RKS21OTN" started.
+2018-08-25 00:18:25.363 +08:00 [DBG] Connection id "0HLG9RKS21OTO" started.
+2018-08-25 00:18:25.429 +08:00 [DBG] Connection id "0HLG9RKS21OTN" received FIN.
+2018-08-25 00:18:25.429 +08:00 [DBG] Connection id "0HLG9RKS21OTO" received FIN.
+2018-08-25 00:18:25.467 +08:00 [DBG] Connection id "0HLG9RKS21OTO" sending FIN.
+2018-08-25 00:18:25.467 +08:00 [DBG] Connection id "0HLG9RKS21OTN" sending FIN.
+2018-08-25 00:18:25.479 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslState.ThrowIfExceptional()
+   at System.Net.Security.SslState.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslState.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-08-25 00:18:25.479 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslState.ThrowIfExceptional()
+   at System.Net.Security.SslState.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslState.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-08-25 00:18:25.549 +08:00 [DBG] Connection id "0HLG9RKS21OTO" stopped.
+2018-08-25 00:18:25.564 +08:00 [DBG] Connection id "0HLG9RKS21OTN" stopped.
+2018-08-25 00:18:25.962 +08:00 [DBG] Connection id "0HLG9RKS21OTP" started.
+2018-08-25 00:18:26.222 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=3&orderBy=author,id%20desc&fields=id,title  
+2018-08-25 00:18:26.231 +08:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2018-08-25 00:18:26.345 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:18:26.364 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '3f497ac9-ff97-43a8-8c7c-e8b0bd1b9d6b' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:18:26.414 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:18:26.419 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:18:26.431 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:18:26.447 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:18:26.453 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:18:26.465 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:18:26.508 +08:00 [DBG] Attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters' ...
+2018-08-25 00:18:26.576 +08:00 [DBG] Attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name '' in request data ...
+2018-08-25 00:18:26.587 +08:00 [DBG] Could not find a value in the request with name 'Title' for binding property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:18:26.598 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:18:26.603 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32' using the name 'PageIndex' in request data ...
+2018-08-25 00:18:26.612 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:18:26.617 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32' using the name 'PageSize' in request data ...
+2018-08-25 00:18:26.620 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:18:26.627 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String' using the name 'OrderBy' in request data ...
+2018-08-25 00:18:26.630 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:18:26.632 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String' using the name 'Fields' in request data ...
+2018-08-25 00:18:26.633 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:18:26.636 +08:00 [DBG] Done attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name ''.
+2018-08-25 00:18:26.637 +08:00 [DBG] Done attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters'.
+2018-08-25 00:18:26.670 +08:00 [INF] Executing action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) with arguments (["RayBlog.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2018-08-25 00:18:26.717 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:18:26.901 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_3 in DbSet<Post>
+order by [<generated>_3].Id desc
+order by [<generated>_3].Author asc
+select [<generated>_3]).Count()'
+2018-08-25 00:18:26.914 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_3 in DbSet<Post>
+select [<generated>_3]).Count()'
+2018-08-25 00:18:26.986 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<int> _InterceptExceptions(
+    source: IAsyncEnumerable<int> _ToSequence(() => Task<int> GetResult(
+            valueBuffers: IAsyncEnumerable<ValueBuffer> _Query(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT COUNT(*)
+                    FROM [Posts] AS [p]), 
+            throwOnNullResult: False, 
+            cancellationToken: queryContext.CancellationToken)), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:18:27.044 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:27.046 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:27.060 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:18:27.100 +08:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:18:27.154 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:18:27.156 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:27.160 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:27.245 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_4 in DbSet<Post>
+order by [<generated>_4].Id desc
+order by [<generated>_4].Author asc
+select [<generated>_4])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:18:27.281 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_4 in DbSet<Post>
+order by [<generated>_4].Id desc
+order by [<generated>_4].Author asc
+select [<generated>_4])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:18:27.372 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<Post> _InterceptExceptions(
+    source: IAsyncEnumerable<Post> _TrackEntities(
+        results: IAsyncEnumerable<Post> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+                FROM [Posts] AS [p]
+                ORDER BY [p].[Author], [p].[Id] DESC
+                OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY, 
+            shaper: UnbufferedEntityShaper<Post>), 
+        queryContext: queryContext, 
+        entityTrackingInfos: { itemType: Post }, 
+        entityAccessors: List<Func<Post, object>> 
+        { 
+            Func<Post, Post>, 
+        }
+    ), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:18:27.415 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:27.416 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:27.436 +08:00 [DBG] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY [p].[Author], [p].[Id] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:18:27.465 +08:00 [INF] Executed DbCommand (34ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY [p].[Author], [p].[Id] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:18:27.595 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:27.653 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:27.658 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:27.660 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:18:27.661 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:27.662 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:27.869 +08:00 [INF] Executed action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1179.9635ms.
+2018-08-25 00:18:27.942 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2018-08-25 00:18:27.999 +08:00 [DBG] Attempting to select an output formatter based on Accept header '["application/json"]'.
+2018-08-25 00:18:28.111 +08:00 [DBG] Connection id "0HLG9RKS21OTQ" started.
+2018-08-25 00:18:28.522 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+2018-08-25 00:18:28.531 +08:00 [DBG] Connection id "0HLG9RKS21OTR" started.
+2018-08-25 00:18:28.533 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts  
+2018-08-25 00:18:28.539 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2018-08-25 00:18:28.616 +08:00 [DBG] Redirecting to 'https://localhost:5001/api/posts'.
+2018-08-25 00:18:28.668 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 2192.8793ms
+2018-08-25 00:18:28.729 +08:00 [DBG] Connection id "0HLG9RKS21OTQ" completed keep alive response.
+2018-08-25 00:18:28.732 +08:00 [DBG] Connection id "0HLG9RKS21OTS" started.
+2018-08-25 00:18:28.754 +08:00 [INF] Request finished in 220.4206ms 307 
+2018-08-25 00:18:28.826 +08:00 [DBG] Connection id "0HLG9RKS21OTT" started.
+2018-08-25 00:18:28.757 +08:00 [DBG] Connection id "0HLG9RKS21OTP" completed keep alive response.
+2018-08-25 00:18:28.879 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts  
+2018-08-25 00:18:28.901 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:18:28.902 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '3f497ac9-ff97-43a8-8c7c-e8b0bd1b9d6b' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:18:28.904 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:18:28.904 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:18:28.910 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:18:28.911 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:18:28.909 +08:00 [INF] Request finished in 2689.2027ms 200 application/json; charset=utf-8
+2018-08-25 00:18:28.913 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:18:28.936 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:18:28.938 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:18:28.950 +08:00 [DBG] Attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters' ...
+2018-08-25 00:18:28.951 +08:00 [DBG] Attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name '' in request data ...
+2018-08-25 00:18:28.954 +08:00 [DBG] Could not find a value in the request with name 'Title' for binding property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:18:28.957 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:18:28.960 +08:00 [DBG] Could not find a value in the request with name 'PageIndex' for binding property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:18:28.968 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:18:28.969 +08:00 [DBG] Could not find a value in the request with name 'PageSize' for binding property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:18:28.971 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:18:28.974 +08:00 [DBG] Could not find a value in the request with name 'OrderBy' for binding property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:18:28.978 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:18:29.163 +08:00 [DBG] Could not find a value in the request with name 'Fields' for binding property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:18:29.171 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:18:29.183 +08:00 [DBG] Done attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name ''.
+2018-08-25 00:18:29.186 +08:00 [DBG] Done attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters'.
+2018-08-25 00:18:29.205 +08:00 [INF] Executing action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) with arguments (["RayBlog.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2018-08-25 00:18:29.346 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:18:29.352 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Count()'
+2018-08-25 00:18:29.386 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Count()'
+2018-08-25 00:18:29.404 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<int> _InterceptExceptions(
+    source: IAsyncEnumerable<int> _ToSequence(() => Task<int> GetResult(
+            valueBuffers: IAsyncEnumerable<ValueBuffer> _Query(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT COUNT(*)
+                    FROM [Posts] AS [p]), 
+            throwOnNullResult: False, 
+            cancellationToken: queryContext.CancellationToken)), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:18:29.420 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:29.432 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:29.435 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:18:29.460 +08:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:18:29.479 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:18:29.486 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:29.489 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:29.494 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_2 in DbSet<Post>
+select [<generated>_2])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:18:29.503 +08:00 [WRN] Query: '(from Post <generated>_2 in DbSet<Post> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2018-08-25 00:18:29.510 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_2 in DbSet<Post>
+select [<generated>_2])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:18:29.520 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<Post> _InterceptExceptions(
+    source: IAsyncEnumerable<Post> _TrackEntities(
+        results: IAsyncEnumerable<Post> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+                FROM [Posts] AS [p]
+                ORDER BY (SELECT 1)
+                OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY, 
+            shaper: UnbufferedEntityShaper<Post>), 
+        queryContext: queryContext, 
+        entityTrackingInfos: { itemType: Post }, 
+        entityAccessors: List<Func<Post, object>> 
+        { 
+            Func<Post, Post>, 
+        }
+    ), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:18:29.526 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:29.530 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:29.531 +08:00 [DBG] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:18:29.546 +08:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:18:29.549 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:29.550 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:29.551 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:29.553 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:29.559 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:29.561 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:29.564 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:29.566 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:29.568 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:29.570 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:18:29.575 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:18:29.578 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:29.580 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:18:29.583 +08:00 [INF] Executed action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 237.746ms.
+2018-08-25 00:18:29.585 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2018-08-25 00:18:29.590 +08:00 [DBG] No information found on request to perform content negotiation.
+2018-08-25 00:18:29.593 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2018-08-25 00:18:29.595 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2018-08-25 00:18:29.597 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+2018-08-25 00:18:29.599 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2018-08-25 00:18:29.605 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 657.6364ms
+2018-08-25 00:18:29.626 +08:00 [DBG] Connection id "0HLG9RKS21OTS" completed keep alive response.
+2018-08-25 00:18:29.730 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:18:29.738 +08:00 [INF] Request finished in 858.3035ms 200 application/json; charset=utf-8
+2018-08-25 00:18:38.369 +08:00 [DBG] Connection id "0HLG9RKS21OTR" received FIN.
+2018-08-25 00:18:38.373 +08:00 [DBG] Connection id "0HLG9RKS21OTR" disconnecting.
+2018-08-25 00:18:38.385 +08:00 [DBG] Connection id "0HLG9RKS21OTR" sending FIN.
+2018-08-25 00:18:38.387 +08:00 [DBG] Connection id "0HLG9RKS21OTR" stopped.
+2018-08-25 00:27:08.845 +08:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2018-08-25 00:27:09.686 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:27:09.785 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Any()'
+2018-08-25 00:27:09.848 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Any()'
+2018-08-25 00:27:10.003 +08:00 [DBG] (QueryContext queryContext) => IEnumerable<bool> _InterceptExceptions(
+    source: IEnumerable<bool> _ToSequence(() => bool GetResult(
+            valueBuffers: IEnumerable<ValueBuffer> _Query(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT CASE
+                        WHEN EXISTS (
+                            SELECT 1
+                            FROM [Posts] AS [p])
+                        THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                    END), 
+            throwOnNullResult: False)), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:27:10.067 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:27:10.134 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:27:10.189 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Posts] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-08-25 00:27:10.213 +08:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Posts] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-08-25 00:27:10.260 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:27:10.263 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:27:10.265 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:27:10.268 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:27:10.276 +08:00 [DBG] Hosting starting
+2018-08-25 00:27:10.333 +08:00 [INF] User profile is available. Using 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-25 00:27:10.339 +08:00 [DBG] Reading data from file 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys\key-73484aa6-e8f7-4802-a9b5-38bb7db19515.xml'.
+2018-08-25 00:27:10.357 +08:00 [DBG] Reading data from file 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys\key-c851040d-9ce1-4a71-9adc-d84f3795dc9c.xml'.
+2018-08-25 00:27:10.362 +08:00 [DBG] Found key "73484aa6-e8f7-4802-a9b5-38bb7db19515".
+2018-08-25 00:27:10.367 +08:00 [DBG] Found key "c851040d-9ce1-4a71-9adc-d84f3795dc9c".
+2018-08-25 00:27:10.377 +08:00 [DBG] Considering key "73484aa6-e8f7-4802-a9b5-38bb7db19515" with expiration date "2018-09-28T07:01:33.1620695+00:00" as default key.
+2018-08-25 00:27:10.397 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-08-25 00:27:10.400 +08:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-08-25 00:27:10.403 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-08-25 00:27:10.405 +08:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-08-25 00:27:10.409 +08:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-08-25 00:27:10.417 +08:00 [DBG] Using key "73484aa6-e8f7-4802-a9b5-38bb7db19515" as the default key.
+2018-08-25 00:27:10.418 +08:00 [DBG] Key ring with default key "73484aa6-e8f7-4802-a9b5-38bb7db19515" was loaded during application startup.
+2018-08-25 00:27:10.452 +08:00 [DBG] Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value false
+2018-08-25 00:27:10.503 +08:00 [DBG] Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value false
+2018-08-25 00:27:10.505 +08:00 [DBG] Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value false
+2018-08-25 00:27:10.506 +08:00 [DBG] Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value false
+2018-08-25 00:27:10.507 +08:00 [DBG] Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value "AllExceptions"
+2018-08-25 00:27:10.508 +08:00 [DBG] Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value false
+2018-08-25 00:27:10.526 +08:00 [DBG] Compatibility switch AllowAreas in type RazorPagesOptions is using default value false
+2018-08-25 00:27:10.527 +08:00 [DBG] Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value false
+2018-08-25 00:27:10.550 +08:00 [DBG] Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value false
+2018-08-25 00:27:10.575 +08:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2018-08-25 00:27:10.619 +08:00 [DBG] Failed to locate the development https certificate at 'null'.
+2018-08-25 00:27:10.705 +08:00 [DBG] Using development certificate: CN=localhost (Thumbprint: D30E946E0AD126EEA5F9A35F1B7DB97F0FE3D2EA)
+2018-08-25 00:27:10.773 +08:00 [DBG] Hosting started
+2018-08-25 00:27:10.774 +08:00 [DBG] Loaded hosting startup assembly RayBlog.APi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2018-08-25 00:27:10.903 +08:00 [DBG] Connection id "0HLG9RPOLVGO8" started.
+2018-08-25 00:27:10.939 +08:00 [DBG] Connection id "0HLG9RPOLVGO8" received FIN.
+2018-08-25 00:27:10.943 +08:00 [DBG] Connection id "0HLG9RPOLVGO8" sending FIN.
+2018-08-25 00:27:10.951 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-08-25 00:27:11.023 +08:00 [DBG] Connection id "0HLG9RPOLVGO8" stopped.
+2018-08-25 00:27:12.255 +08:00 [DBG] Connection id "0HLG9RPOLVGO9" started.
+2018-08-25 00:27:12.475 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=3&orderBy=author,id%20desc&fields=id,title,ghg  
+2018-08-25 00:27:12.485 +08:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2018-08-25 00:27:12.618 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:27:12.650 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '0321ed15-e245-48b9-b61b-d362ffd10665' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:27:12.710 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:27:12.718 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:27:12.722 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:27:12.726 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:27:12.735 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:27:12.737 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:27:12.772 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 30.524900000000002ms
+2018-08-25 00:27:12.776 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'RayBlog.Infrastructure.Services.ITypeHelperService' while attempting to activate 'RayBlog.APi.Controllers.PostController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-08-25 00:27:12.841 +08:00 [ERR] Unable to resolve service for type 'RayBlog.Infrastructure.Services.ITypeHelperService' while attempting to activate 'RayBlog.APi.Controllers.PostController'.
+System.InvalidOperationException: Unable to resolve service for type 'RayBlog.Infrastructure.Services.ITypeHelperService' while attempting to activate 'RayBlog.APi.Controllers.PostController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-08-25 00:27:12.907 +08:00 [DBG] Connection id "0HLG9RPOLVGO9" completed keep alive response.
+2018-08-25 00:27:12.918 +08:00 [INF] Request finished in 444.4783ms 500 application/json
+2018-08-25 00:27:13.572 +08:00 [DBG] Connection id "0HLG9RPOLVGOA" started.
+2018-08-25 00:27:13.635 +08:00 [DBG] Connection id "0HLG9RPOLVGOB" started.
+2018-08-25 00:27:13.919 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts  
+2018-08-25 00:27:14.058 +08:00 [DBG] Redirecting to 'https://localhost:5001/api/posts'.
+2018-08-25 00:27:14.063 +08:00 [DBG] Connection id "0HLG9RPOLVGOA" completed keep alive response.
+2018-08-25 00:27:14.068 +08:00 [INF] Request finished in 152.815ms 307 
+2018-08-25 00:27:14.098 +08:00 [DBG] Connection id "0HLG9RPOLVGOC" started.
+2018-08-25 00:27:14.123 +08:00 [DBG] Connection id "0HLG9RPOLVGOD" started.
+2018-08-25 00:27:14.223 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts  
+2018-08-25 00:27:14.239 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:27:14.241 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '0321ed15-e245-48b9-b61b-d362ffd10665' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:27:14.254 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:27:14.261 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:27:14.271 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:27:14.287 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:27:14.291 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:27:14.294 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:27:14.307 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 1.6825ms
+2018-08-25 00:27:14.326 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'RayBlog.Infrastructure.Services.ITypeHelperService' while attempting to activate 'RayBlog.APi.Controllers.PostController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-08-25 00:27:14.355 +08:00 [ERR] Unable to resolve service for type 'RayBlog.Infrastructure.Services.ITypeHelperService' while attempting to activate 'RayBlog.APi.Controllers.PostController'.
+System.InvalidOperationException: Unable to resolve service for type 'RayBlog.Infrastructure.Services.ITypeHelperService' while attempting to activate 'RayBlog.APi.Controllers.PostController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-08-25 00:27:14.390 +08:00 [DBG] Connection id "0HLG9RPOLVGOC" completed keep alive response.
+2018-08-25 00:27:14.456 +08:00 [INF] Request finished in 232.5574ms 500 application/json
+2018-08-25 00:27:16.186 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=3&orderBy=author,id%20desc&fields=id,title,ghg  
+2018-08-25 00:27:16.191 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:27:16.204 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '0321ed15-e245-48b9-b61b-d362ffd10665' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:27:16.210 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:27:16.239 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:27:16.242 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:27:16.246 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:27:16.251 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:27:16.252 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:27:16.258 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 0.98940000000000006ms
+2018-08-25 00:27:16.260 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'RayBlog.Infrastructure.Services.ITypeHelperService' while attempting to activate 'RayBlog.APi.Controllers.PostController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-08-25 00:27:16.276 +08:00 [ERR] Unable to resolve service for type 'RayBlog.Infrastructure.Services.ITypeHelperService' while attempting to activate 'RayBlog.APi.Controllers.PostController'.
+System.InvalidOperationException: Unable to resolve service for type 'RayBlog.Infrastructure.Services.ITypeHelperService' while attempting to activate 'RayBlog.APi.Controllers.PostController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-08-25 00:27:16.304 +08:00 [DBG] Connection id "0HLG9RPOLVGO9" completed keep alive response.
+2018-08-25 00:27:16.307 +08:00 [INF] Request finished in 123.4889ms 500 application/json
+2018-08-25 00:27:27.737 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=3&orderBy=author,id%20desc&fields=id,title,gfdg  
+2018-08-25 00:27:27.740 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:27:27.742 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '0321ed15-e245-48b9-b61b-d362ffd10665' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:27:27.744 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:27:27.746 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:27:27.749 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:27:27.753 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:27:27.756 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:27:27.760 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:27:27.765 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 1.34ms
+2018-08-25 00:27:27.771 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'RayBlog.Infrastructure.Services.ITypeHelperService' while attempting to activate 'RayBlog.APi.Controllers.PostController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-08-25 00:27:27.787 +08:00 [ERR] Unable to resolve service for type 'RayBlog.Infrastructure.Services.ITypeHelperService' while attempting to activate 'RayBlog.APi.Controllers.PostController'.
+System.InvalidOperationException: Unable to resolve service for type 'RayBlog.Infrastructure.Services.ITypeHelperService' while attempting to activate 'RayBlog.APi.Controllers.PostController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-08-25 00:27:27.807 +08:00 [DBG] Connection id "0HLG9RPOLVGO9" completed keep alive response.
+2018-08-25 00:27:27.808 +08:00 [INF] Request finished in 71.0309ms 500 application/json
+2018-08-25 00:27:38.036 +08:00 [DBG] Connection id "0HLG9RPOLVGOD" received FIN.
+2018-08-25 00:27:38.036 +08:00 [DBG] Connection id "0HLG9RPOLVGOB" received FIN.
+2018-08-25 00:27:38.043 +08:00 [DBG] Connection id "0HLG9RPOLVGOB" disconnecting.
+2018-08-25 00:27:38.043 +08:00 [DBG] Connection id "0HLG9RPOLVGOD" disconnecting.
+2018-08-25 00:27:38.048 +08:00 [DBG] Connection id "0HLG9RPOLVGOD" sending FIN.
+2018-08-25 00:27:38.048 +08:00 [DBG] Connection id "0HLG9RPOLVGOB" sending FIN.
+2018-08-25 00:27:38.064 +08:00 [DBG] Connection id "0HLG9RPOLVGOB" stopped.
+2018-08-25 00:27:38.066 +08:00 [DBG] Connection id "0HLG9RPOLVGOD" stopped.
+2018-08-25 00:29:09.621 +08:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2018-08-25 00:29:10.333 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:29:10.431 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Any()'
+2018-08-25 00:29:10.481 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Any()'
+2018-08-25 00:29:10.614 +08:00 [DBG] (QueryContext queryContext) => IEnumerable<bool> _InterceptExceptions(
+    source: IEnumerable<bool> _ToSequence(() => bool GetResult(
+            valueBuffers: IEnumerable<ValueBuffer> _Query(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT CASE
+                        WHEN EXISTS (
+                            SELECT 1
+                            FROM [Posts] AS [p])
+                        THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                    END), 
+            throwOnNullResult: False)), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:29:10.655 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:29:10.721 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:29:10.762 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Posts] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-08-25 00:29:10.780 +08:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Posts] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-08-25 00:29:10.806 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:29:10.808 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:29:10.810 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:29:10.813 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:29:10.818 +08:00 [DBG] Hosting starting
+2018-08-25 00:29:10.864 +08:00 [INF] User profile is available. Using 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-25 00:29:10.871 +08:00 [DBG] Reading data from file 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys\key-73484aa6-e8f7-4802-a9b5-38bb7db19515.xml'.
+2018-08-25 00:29:10.884 +08:00 [DBG] Reading data from file 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys\key-c851040d-9ce1-4a71-9adc-d84f3795dc9c.xml'.
+2018-08-25 00:29:10.891 +08:00 [DBG] Found key "73484aa6-e8f7-4802-a9b5-38bb7db19515".
+2018-08-25 00:29:10.894 +08:00 [DBG] Found key "c851040d-9ce1-4a71-9adc-d84f3795dc9c".
+2018-08-25 00:29:10.903 +08:00 [DBG] Considering key "73484aa6-e8f7-4802-a9b5-38bb7db19515" with expiration date "2018-09-28T07:01:33.1620695+00:00" as default key.
+2018-08-25 00:29:10.922 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-08-25 00:29:10.925 +08:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-08-25 00:29:10.927 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-08-25 00:29:10.929 +08:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-08-25 00:29:10.934 +08:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-08-25 00:29:10.940 +08:00 [DBG] Using key "73484aa6-e8f7-4802-a9b5-38bb7db19515" as the default key.
+2018-08-25 00:29:10.942 +08:00 [DBG] Key ring with default key "73484aa6-e8f7-4802-a9b5-38bb7db19515" was loaded during application startup.
+2018-08-25 00:29:10.971 +08:00 [DBG] Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value false
+2018-08-25 00:29:11.014 +08:00 [DBG] Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value false
+2018-08-25 00:29:11.015 +08:00 [DBG] Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value false
+2018-08-25 00:29:11.016 +08:00 [DBG] Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value false
+2018-08-25 00:29:11.017 +08:00 [DBG] Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value "AllExceptions"
+2018-08-25 00:29:11.018 +08:00 [DBG] Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value false
+2018-08-25 00:29:11.035 +08:00 [DBG] Compatibility switch AllowAreas in type RazorPagesOptions is using default value false
+2018-08-25 00:29:11.036 +08:00 [DBG] Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value false
+2018-08-25 00:29:11.051 +08:00 [DBG] Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value false
+2018-08-25 00:29:11.074 +08:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2018-08-25 00:29:11.113 +08:00 [DBG] Failed to locate the development https certificate at 'null'.
+2018-08-25 00:29:11.183 +08:00 [DBG] Using development certificate: CN=localhost (Thumbprint: D30E946E0AD126EEA5F9A35F1B7DB97F0FE3D2EA)
+2018-08-25 00:29:11.233 +08:00 [DBG] Hosting started
+2018-08-25 00:29:11.235 +08:00 [DBG] Loaded hosting startup assembly RayBlog.APi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2018-08-25 00:29:11.292 +08:00 [DBG] Connection id "0HLG9RQSI3K9B" started.
+2018-08-25 00:29:11.341 +08:00 [DBG] Connection id "0HLG9RQSI3K9B" received FIN.
+2018-08-25 00:29:11.350 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-08-25 00:29:11.357 +08:00 [DBG] Connection id "0HLG9RQSI3K9B" sending FIN.
+2018-08-25 00:29:11.412 +08:00 [DBG] Connection id "0HLG9RQSI3K9B" stopped.
+2018-08-25 00:29:13.323 +08:00 [DBG] Connection id "0HLG9RQSI3K9C" started.
+2018-08-25 00:29:13.713 +08:00 [DBG] Connection id "0HLG9RQSI3K9D" started.
+2018-08-25 00:29:13.842 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts  
+2018-08-25 00:29:13.877 +08:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2018-08-25 00:29:13.927 +08:00 [DBG] Redirecting to 'https://localhost:5001/api/posts'.
+2018-08-25 00:29:13.937 +08:00 [DBG] Connection id "0HLG9RQSI3K9C" completed keep alive response.
+2018-08-25 00:29:13.950 +08:00 [DBG] Connection id "0HLG9RQSI3K9E" started.
+2018-08-25 00:29:13.988 +08:00 [INF] Request finished in 151.9693ms 307 
+2018-08-25 00:29:13.992 +08:00 [DBG] Connection id "0HLG9RQSI3K9F" started.
+2018-08-25 00:29:14.201 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts  
+2018-08-25 00:29:14.410 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:29:14.444 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '7e7a6553-b7fe-4138-aef1-b0e6a7f8b15a' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:29:14.514 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:29:14.517 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:29:14.518 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:29:14.520 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:29:14.526 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:29:14.527 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:29:14.550 +08:00 [DBG] Attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters' ...
+2018-08-25 00:29:14.552 +08:00 [DBG] Attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name '' in request data ...
+2018-08-25 00:29:14.562 +08:00 [DBG] Could not find a value in the request with name 'Title' for binding property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:29:14.563 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:29:14.565 +08:00 [DBG] Could not find a value in the request with name 'PageIndex' for binding property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:29:14.566 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:29:14.568 +08:00 [DBG] Could not find a value in the request with name 'PageSize' for binding property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:29:14.569 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:29:14.571 +08:00 [DBG] Could not find a value in the request with name 'OrderBy' for binding property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:29:14.573 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:29:14.574 +08:00 [DBG] Could not find a value in the request with name 'Fields' for binding property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:29:14.576 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:29:14.578 +08:00 [DBG] Done attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name ''.
+2018-08-25 00:29:14.581 +08:00 [DBG] Done attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters'.
+2018-08-25 00:29:14.609 +08:00 [INF] Executing action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) with arguments (["RayBlog.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2018-08-25 00:29:14.644 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:29:14.657 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Count()'
+2018-08-25 00:29:14.660 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Count()'
+2018-08-25 00:29:14.718 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<int> _InterceptExceptions(
+    source: IAsyncEnumerable<int> _ToSequence(() => Task<int> GetResult(
+            valueBuffers: IAsyncEnumerable<ValueBuffer> _Query(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT COUNT(*)
+                    FROM [Posts] AS [p]), 
+            throwOnNullResult: False, 
+            cancellationToken: queryContext.CancellationToken)), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:29:14.776 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:29:14.778 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:29:14.790 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:29:14.818 +08:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:29:14.853 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:29:14.854 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:29:14.855 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:29:14.900 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_2 in DbSet<Post>
+select [<generated>_2])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:29:14.906 +08:00 [WRN] Query: '(from Post <generated>_2 in DbSet<Post> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2018-08-25 00:29:14.917 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_2 in DbSet<Post>
+select [<generated>_2])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:29:14.968 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<Post> _InterceptExceptions(
+    source: IAsyncEnumerable<Post> _TrackEntities(
+        results: IAsyncEnumerable<Post> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+                FROM [Posts] AS [p]
+                ORDER BY (SELECT 1)
+                OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY, 
+            shaper: UnbufferedEntityShaper<Post>), 
+        queryContext: queryContext, 
+        entityTrackingInfos: { itemType: Post }, 
+        entityAccessors: List<Func<Post, object>> 
+        { 
+            Func<Post, Post>, 
+        }
+    ), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:29:14.999 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:29:15.000 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:29:15.018 +08:00 [DBG] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:29:15.038 +08:00 [INF] Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:29:15.162 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:29:15.212 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:29:15.214 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:29:15.215 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:29:15.217 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:29:15.218 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:29:15.228 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:29:15.230 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:29:15.234 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:29:15.235 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:29:15.238 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:29:15.241 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:29:15.249 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:29:15.388 +08:00 [INF] Executed action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 774.8707ms.
+2018-08-25 00:29:15.402 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2018-08-25 00:29:15.409 +08:00 [DBG] No information found on request to perform content negotiation.
+2018-08-25 00:29:15.411 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2018-08-25 00:29:15.413 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2018-08-25 00:29:15.415 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+2018-08-25 00:29:15.417 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2018-08-25 00:29:15.470 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 928.7508ms
+2018-08-25 00:29:15.487 +08:00 [DBG] Connection id "0HLG9RQSI3K9E" completed keep alive response.
+2018-08-25 00:29:15.511 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:29:15.523 +08:00 [INF] Request finished in 1321.9264ms 200 application/json; charset=utf-8
+2018-08-25 00:29:19.823 +08:00 [DBG] Connection id "0HLG9RQSI3K9G" started.
+2018-08-25 00:29:19.832 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=3&orderBy=author,id%20desc&fields=id,title,gfdg  
+2018-08-25 00:29:19.834 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:29:19.835 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '7e7a6553-b7fe-4138-aef1-b0e6a7f8b15a' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:29:19.837 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:29:19.838 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:29:19.839 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:29:19.845 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:29:19.847 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:29:19.848 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:29:19.855 +08:00 [DBG] Attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters' ...
+2018-08-25 00:29:19.864 +08:00 [DBG] Attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name '' in request data ...
+2018-08-25 00:29:19.866 +08:00 [DBG] Could not find a value in the request with name 'Title' for binding property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:29:19.868 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:29:19.870 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32' using the name 'PageIndex' in request data ...
+2018-08-25 00:29:19.879 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:29:19.882 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32' using the name 'PageSize' in request data ...
+2018-08-25 00:29:19.885 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:29:19.889 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String' using the name 'OrderBy' in request data ...
+2018-08-25 00:29:19.890 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:29:19.892 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String' using the name 'Fields' in request data ...
+2018-08-25 00:29:19.896 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:29:19.897 +08:00 [DBG] Done attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name ''.
+2018-08-25 00:29:19.898 +08:00 [DBG] Done attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters'.
+2018-08-25 00:29:19.900 +08:00 [INF] Executing action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) with arguments (["RayBlog.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2018-08-25 00:29:19.902 +08:00 [INF] Executed action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.5822ms.
+2018-08-25 00:29:19.907 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2018-08-25 00:29:19.920 +08:00 [DBG] Attempting to select an output formatter based on Accept header '["application/json"]'.
+2018-08-25 00:29:19.921 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+2018-08-25 00:29:19.922 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2018-08-25 00:29:19.923 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 73.82050000000001ms
+2018-08-25 00:29:19.928 +08:00 [DBG] Connection id "0HLG9RQSI3K9G" completed keep alive response.
+2018-08-25 00:29:19.930 +08:00 [INF] Request finished in 97.295ms 400 application/json; charset=utf-8
+2018-08-25 00:29:23.650 +08:00 [DBG] Connection id "0HLG9RQSI3K9D" received FIN.
+2018-08-25 00:29:23.652 +08:00 [DBG] Connection id "0HLG9RQSI3K9D" disconnecting.
+2018-08-25 00:29:23.658 +08:00 [DBG] Connection id "0HLG9RQSI3K9D" sending FIN.
+2018-08-25 00:29:23.666 +08:00 [DBG] Connection id "0HLG9RQSI3K9D" stopped.
+2018-08-25 00:29:38.040 +08:00 [DBG] Connection id "0HLG9RQSI3K9F" received FIN.
+2018-08-25 00:29:38.045 +08:00 [DBG] Connection id "0HLG9RQSI3K9F" disconnecting.
+2018-08-25 00:29:38.056 +08:00 [DBG] Connection id "0HLG9RQSI3K9F" sending FIN.
+2018-08-25 00:29:38.090 +08:00 [DBG] Connection id "0HLG9RQSI3K9F" stopped.
+2018-08-25 00:34:22.040 +08:00 [DBG] Connection id "0HLG9RQSI3K9C" received FIN.
+2018-08-25 00:34:22.041 +08:00 [DBG] Connection id "0HLG9RQSI3K9C" disconnecting.
+2018-08-25 00:34:22.056 +08:00 [DBG] Connection id "0HLG9RQSI3K9C" sending FIN.
+2018-08-25 00:34:22.058 +08:00 [DBG] Connection id "0HLG9RQSI3K9C" stopped.
+2018-08-25 00:34:38.038 +08:00 [DBG] Connection id "0HLG9RQSI3K9E" received FIN.
+2018-08-25 00:34:38.040 +08:00 [DBG] Connection id "0HLG9RQSI3K9E" disconnecting.
+2018-08-25 00:34:38.043 +08:00 [DBG] Connection id "0HLG9RQSI3K9E" sending FIN.
+2018-08-25 00:34:38.050 +08:00 [DBG] Connection id "0HLG9RQSI3K9E" stopped.
+2018-08-25 00:37:07.601 +08:00 [DBG] Connection id "0HLG9RQSI3K9G" received FIN.
+2018-08-25 00:37:07.604 +08:00 [DBG] Connection id "0HLG9RQSI3K9G" disconnecting.
+2018-08-25 00:37:07.614 +08:00 [DBG] Connection id "0HLG9RQSI3K9G" sending FIN.
+2018-08-25 00:37:07.615 +08:00 [DBG] Connection id "0HLG9RQSI3K9G" stopped.
+2018-08-25 00:41:43.970 +08:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2018-08-25 00:41:45.043 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:41:45.194 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Any()'
+2018-08-25 00:41:45.248 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Any()'
+2018-08-25 00:41:45.426 +08:00 [DBG] (QueryContext queryContext) => IEnumerable<bool> _InterceptExceptions(
+    source: IEnumerable<bool> _ToSequence(() => bool GetResult(
+            valueBuffers: IEnumerable<ValueBuffer> _Query(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT CASE
+                        WHEN EXISTS (
+                            SELECT 1
+                            FROM [Posts] AS [p])
+                        THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                    END), 
+            throwOnNullResult: False)), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:41:45.483 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:45.595 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:45.675 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Posts] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-08-25 00:41:45.692 +08:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Posts] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-08-25 00:41:45.719 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:41:45.720 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:45.723 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:45.725 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:41:45.736 +08:00 [DBG] Hosting starting
+2018-08-25 00:41:45.793 +08:00 [INF] User profile is available. Using 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-25 00:41:45.799 +08:00 [DBG] Reading data from file 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys\key-73484aa6-e8f7-4802-a9b5-38bb7db19515.xml'.
+2018-08-25 00:41:45.810 +08:00 [DBG] Reading data from file 'C:\Users\10358\AppData\Local\ASP.NET\DataProtection-Keys\key-c851040d-9ce1-4a71-9adc-d84f3795dc9c.xml'.
+2018-08-25 00:41:45.817 +08:00 [DBG] Found key "73484aa6-e8f7-4802-a9b5-38bb7db19515".
+2018-08-25 00:41:45.820 +08:00 [DBG] Found key "c851040d-9ce1-4a71-9adc-d84f3795dc9c".
+2018-08-25 00:41:45.829 +08:00 [DBG] Considering key "73484aa6-e8f7-4802-a9b5-38bb7db19515" with expiration date "2018-09-28T07:01:33.1620695+00:00" as default key.
+2018-08-25 00:41:45.842 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-08-25 00:41:45.844 +08:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-08-25 00:41:45.846 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-08-25 00:41:45.849 +08:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-08-25 00:41:45.854 +08:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-08-25 00:41:45.861 +08:00 [DBG] Using key "73484aa6-e8f7-4802-a9b5-38bb7db19515" as the default key.
+2018-08-25 00:41:45.863 +08:00 [DBG] Key ring with default key "73484aa6-e8f7-4802-a9b5-38bb7db19515" was loaded during application startup.
+2018-08-25 00:41:45.890 +08:00 [DBG] Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value false
+2018-08-25 00:41:45.927 +08:00 [DBG] Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value false
+2018-08-25 00:41:45.928 +08:00 [DBG] Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value false
+2018-08-25 00:41:45.931 +08:00 [DBG] Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value false
+2018-08-25 00:41:45.932 +08:00 [DBG] Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value "AllExceptions"
+2018-08-25 00:41:45.933 +08:00 [DBG] Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value false
+2018-08-25 00:41:45.952 +08:00 [DBG] Compatibility switch AllowAreas in type RazorPagesOptions is using default value false
+2018-08-25 00:41:45.953 +08:00 [DBG] Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value false
+2018-08-25 00:41:45.973 +08:00 [DBG] Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value false
+2018-08-25 00:41:45.999 +08:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2018-08-25 00:41:46.037 +08:00 [DBG] Failed to locate the development https certificate at 'null'.
+2018-08-25 00:41:46.095 +08:00 [DBG] Using development certificate: CN=localhost (Thumbprint: D30E946E0AD126EEA5F9A35F1B7DB97F0FE3D2EA)
+2018-08-25 00:41:46.138 +08:00 [DBG] Hosting started
+2018-08-25 00:41:46.139 +08:00 [DBG] Loaded hosting startup assembly RayBlog.APi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2018-08-25 00:41:46.197 +08:00 [DBG] Connection id "0HLG9S1THE1A0" started.
+2018-08-25 00:41:46.198 +08:00 [DBG] Connection id "0HLG9S1THE1A1" started.
+2018-08-25 00:41:46.242 +08:00 [DBG] Connection id "0HLG9S1THE1A1" received FIN.
+2018-08-25 00:41:46.242 +08:00 [DBG] Connection id "0HLG9S1THE1A0" received FIN.
+2018-08-25 00:41:46.264 +08:00 [DBG] Connection id "0HLG9S1THE1A0" sending FIN.
+2018-08-25 00:41:46.264 +08:00 [DBG] Connection id "0HLG9S1THE1A1" sending FIN.
+2018-08-25 00:41:46.268 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslState.ThrowIfExceptional()
+   at System.Net.Security.SslState.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslState.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-08-25 00:41:46.268 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslState.ThrowIfExceptional()
+   at System.Net.Security.SslState.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslState.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-08-25 00:41:46.328 +08:00 [DBG] Connection id "0HLG9S1THE1A1" stopped.
+2018-08-25 00:41:46.328 +08:00 [DBG] Connection id "0HLG9S1THE1A0" stopped.
+2018-08-25 00:41:48.510 +08:00 [DBG] Connection id "0HLG9S1THE1A2" started.
+2018-08-25 00:41:48.853 +08:00 [DBG] Connection id "0HLG9S1THE1A3" started.
+2018-08-25 00:41:49.186 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts  
+2018-08-25 00:41:49.223 +08:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2018-08-25 00:41:49.291 +08:00 [DBG] Redirecting to 'https://localhost:5001/api/posts'.
+2018-08-25 00:41:49.309 +08:00 [DBG] Connection id "0HLG9S1THE1A2" completed keep alive response.
+2018-08-25 00:41:49.313 +08:00 [DBG] Connection id "0HLG9S1THE1A4" started.
+2018-08-25 00:41:49.325 +08:00 [DBG] Connection id "0HLG9S1THE1A5" started.
+2018-08-25 00:41:49.326 +08:00 [INF] Request finished in 134.4187ms 307 
+2018-08-25 00:41:49.573 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts  
+2018-08-25 00:41:49.791 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:41:49.812 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '0a999736-c1b4-4ee6-9c1c-90f240d3d1bf' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:41:49.870 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:41:49.872 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:41:49.873 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:41:49.874 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:41:49.876 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:41:49.877 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:41:49.896 +08:00 [DBG] Attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters' ...
+2018-08-25 00:41:49.900 +08:00 [DBG] Attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name '' in request data ...
+2018-08-25 00:41:49.906 +08:00 [DBG] Could not find a value in the request with name 'Title' for binding property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:41:49.908 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:41:49.910 +08:00 [DBG] Could not find a value in the request with name 'PageIndex' for binding property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:41:49.912 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:41:49.913 +08:00 [DBG] Could not find a value in the request with name 'PageSize' for binding property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:41:49.922 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:41:49.923 +08:00 [DBG] Could not find a value in the request with name 'OrderBy' for binding property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:41:49.930 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:41:49.935 +08:00 [DBG] Could not find a value in the request with name 'Fields' for binding property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:41:49.939 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:41:49.942 +08:00 [DBG] Done attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name ''.
+2018-08-25 00:41:49.943 +08:00 [DBG] Done attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters'.
+2018-08-25 00:41:49.978 +08:00 [INF] Executing action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) with arguments (["RayBlog.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2018-08-25 00:41:50.011 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:41:50.022 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Count()'
+2018-08-25 00:41:50.025 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_1 in DbSet<Post>
+select [<generated>_1]).Count()'
+2018-08-25 00:41:50.072 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<int> _InterceptExceptions(
+    source: IAsyncEnumerable<int> _ToSequence(() => Task<int> GetResult(
+            valueBuffers: IAsyncEnumerable<ValueBuffer> _Query(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT COUNT(*)
+                    FROM [Posts] AS [p]), 
+            throwOnNullResult: False, 
+            cancellationToken: queryContext.CancellationToken)), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:41:50.117 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:50.121 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:50.137 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:41:50.159 +08:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:41:50.186 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:41:50.187 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:50.189 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:50.217 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_2 in DbSet<Post>
+select [<generated>_2])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:41:50.224 +08:00 [WRN] Query: '(from Post <generated>_2 in DbSet<Post> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2018-08-25 00:41:50.233 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_2 in DbSet<Post>
+select [<generated>_2])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:41:50.293 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<Post> _InterceptExceptions(
+    source: IAsyncEnumerable<Post> _TrackEntities(
+        results: IAsyncEnumerable<Post> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+                FROM [Posts] AS [p]
+                ORDER BY (SELECT 1)
+                OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY, 
+            shaper: UnbufferedEntityShaper<Post>), 
+        queryContext: queryContext, 
+        entityTrackingInfos: { itemType: Post }, 
+        entityAccessors: List<Func<Post, object>> 
+        { 
+            Func<Post, Post>, 
+        }
+    ), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:41:50.336 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:50.339 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:50.363 +08:00 [DBG] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:41:50.394 +08:00 [INF] Executed DbCommand (38ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:41:50.470 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:50.512 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:50.514 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:50.519 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:50.520 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:50.525 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:50.527 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:50.528 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:50.533 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:50.537 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:50.543 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:41:50.545 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:50.546 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:50.708 +08:00 [INF] Executed action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 723.0329ms.
+2018-08-25 00:41:50.728 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2018-08-25 00:41:50.742 +08:00 [DBG] No information found on request to perform content negotiation.
+2018-08-25 00:41:50.742 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2018-08-25 00:41:50.743 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2018-08-25 00:41:50.749 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+2018-08-25 00:41:50.753 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2018-08-25 00:41:50.810 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 924.48070000000007ms
+2018-08-25 00:41:50.896 +08:00 [DBG] Connection id "0HLG9S1THE1A4" completed keep alive response.
+2018-08-25 00:41:50.905 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:41:50.908 +08:00 [INF] Request finished in 1334.5809ms 200 application/json; charset=utf-8
+2018-08-25 00:41:58.378 +08:00 [DBG] Connection id "0HLG9S1THE1A6" started.
+2018-08-25 00:41:58.395 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=3&orderBy=author,id%20desc&fields=id,title  
+2018-08-25 00:41:58.396 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:41:58.397 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '0a999736-c1b4-4ee6-9c1c-90f240d3d1bf' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:41:58.400 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:41:58.405 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:41:58.407 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:41:58.409 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:41:58.411 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:41:58.414 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:41:58.423 +08:00 [DBG] Attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters' ...
+2018-08-25 00:41:58.426 +08:00 [DBG] Attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name '' in request data ...
+2018-08-25 00:41:58.428 +08:00 [DBG] Could not find a value in the request with name 'Title' for binding property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:41:58.429 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:41:58.432 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32' using the name 'PageIndex' in request data ...
+2018-08-25 00:41:58.439 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:41:58.443 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32' using the name 'PageSize' in request data ...
+2018-08-25 00:41:58.446 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:41:58.449 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String' using the name 'OrderBy' in request data ...
+2018-08-25 00:41:58.451 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:41:58.455 +08:00 [DBG] Attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String' using the name 'Fields' in request data ...
+2018-08-25 00:41:58.456 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:41:58.458 +08:00 [DBG] Done attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name ''.
+2018-08-25 00:41:58.459 +08:00 [DBG] Done attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters'.
+2018-08-25 00:41:58.461 +08:00 [INF] Executing action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) with arguments (["RayBlog.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2018-08-25 00:41:58.470 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:41:58.550 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_3 in DbSet<Post>
+order by [<generated>_3].Id desc
+order by [<generated>_3].Author asc
+select [<generated>_3]).Count()'
+2018-08-25 00:41:58.553 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_3 in DbSet<Post>
+select [<generated>_3]).Count()'
+2018-08-25 00:41:58.557 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<int> _InterceptExceptions(
+    source: IAsyncEnumerable<int> _ToSequence(() => Task<int> GetResult(
+            valueBuffers: IAsyncEnumerable<ValueBuffer> _Query(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT COUNT(*)
+                    FROM [Posts] AS [p]), 
+            throwOnNullResult: False, 
+            cancellationToken: queryContext.CancellationToken)), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:41:58.563 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:58.564 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:58.565 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:41:58.573 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:41:58.580 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:41:58.580 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:58.582 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:58.585 +08:00 [DBG] Compiling query model: 
+'(from Post <generated>_4 in DbSet<Post>
+order by [<generated>_4].Id desc
+order by [<generated>_4].Author asc
+select [<generated>_4])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:41:58.600 +08:00 [DBG] Optimized query model: 
+'(from Post <generated>_4 in DbSet<Post>
+order by [<generated>_4].Id desc
+order by [<generated>_4].Author asc
+select [<generated>_4])
+.Skip(__p_0)
+.Take(__p_1)'
+2018-08-25 00:41:58.620 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<Post> _InterceptExceptions(
+    source: IAsyncEnumerable<Post> _TrackEntities(
+        results: IAsyncEnumerable<Post> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+                FROM [Posts] AS [p]
+                ORDER BY [p].[Author], [p].[Id] DESC
+                OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY, 
+            shaper: UnbufferedEntityShaper<Post>), 
+        queryContext: queryContext, 
+        entityTrackingInfos: { itemType: Post }, 
+        entityAccessors: List<Func<Post, object>> 
+        { 
+            Func<Post, Post>, 
+        }
+    ), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:41:58.623 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:58.623 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:58.624 +08:00 [DBG] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY [p].[Author], [p].[Id] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:41:58.628 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY [p].[Author], [p].[Id] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:41:58.632 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:58.635 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:58.636 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:41:58.637 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:41:58.638 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:58.639 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:41:58.648 +08:00 [INF] Executed action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 185.78750000000002ms.
+2018-08-25 00:41:58.650 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2018-08-25 00:41:58.656 +08:00 [DBG] Attempting to select an output formatter based on Accept header '["application/json"]'.
+2018-08-25 00:41:58.657 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+2018-08-25 00:41:58.660 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2018-08-25 00:41:58.661 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 241.75230000000002ms
+2018-08-25 00:41:58.663 +08:00 [DBG] Connection id "0HLG9S1THE1A6" completed keep alive response.
+2018-08-25 00:41:58.665 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:41:58.669 +08:00 [INF] Request finished in 274.3854ms 200 application/json; charset=utf-8
+2018-08-25 00:42:08.051 +08:00 [DBG] Connection id "0HLG9S1THE1A3" received FIN.
+2018-08-25 00:42:08.062 +08:00 [DBG] Connection id "0HLG9S1THE1A3" disconnecting.
+2018-08-25 00:42:08.063 +08:00 [DBG] Connection id "0HLG9S1THE1A3" sending FIN.
+2018-08-25 00:42:08.066 +08:00 [DBG] Connection id "0HLG9S1THE1A3" stopped.
+2018-08-25 00:42:16.974 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?1  
+2018-08-25 00:42:16.975 +08:00 [DBG] Request successfully matched the route with name 'GetPosts' and template 'api/posts'.
+2018-08-25 00:42:16.976 +08:00 [DBG] Action 'RayBlog.APi.Controllers.PostController.Post (RayBlog.APi)' with id '0a999736-c1b4-4ee6-9c1c-90f240d3d1bf' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2018-08-25 00:42:16.978 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:42:16.979 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:42:16.980 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:42:16.981 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:42:16.983 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:42:16.986 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:42:16.990 +08:00 [DBG] Attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters' ...
+2018-08-25 00:42:16.992 +08:00 [DBG] Attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name '' in request data ...
+2018-08-25 00:42:17.001 +08:00 [DBG] Could not find a value in the request with name 'Title' for binding property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:42:17.005 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Title' of type 'System.String'.
+2018-08-25 00:42:17.008 +08:00 [DBG] Could not find a value in the request with name 'PageIndex' for binding property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:42:17.012 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageIndex' of type 'System.Int32'.
+2018-08-25 00:42:17.017 +08:00 [DBG] Could not find a value in the request with name 'PageSize' for binding property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:42:17.020 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.PageSize' of type 'System.Int32'.
+2018-08-25 00:42:17.022 +08:00 [DBG] Could not find a value in the request with name 'OrderBy' for binding property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:42:17.028 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.OrderBy' of type 'System.String'.
+2018-08-25 00:42:17.029 +08:00 [DBG] Could not find a value in the request with name 'Fields' for binding property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:42:17.032 +08:00 [DBG] Done attempting to bind property 'RayBlog.Core.Entities.PostParameters.Fields' of type 'System.String'.
+2018-08-25 00:42:17.033 +08:00 [DBG] Done attempting to bind model of type 'RayBlog.Core.Entities.PostParameters' using the name ''.
+2018-08-25 00:42:17.034 +08:00 [DBG] Done attempting to bind parameter 'postParameters' of type 'RayBlog.Core.Entities.PostParameters'.
+2018-08-25 00:42:17.035 +08:00 [INF] Executing action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) with arguments (["RayBlog.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2018-08-25 00:42:17.038 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:42:17.042 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:42:17.043 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:42:17.045 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:42:17.049 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+2018-08-25 00:42:17.051 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:42:17.052 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:42:17.053 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:42:17.055 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:42:17.058 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:42:17.059 +08:00 [DBG] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:42:17.062 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Author], [p].[Body], [p].[LastModified], [p].[Remark], [p].[Title]
+FROM [Posts] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2018-08-25 00:42:17.065 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:42:17.068 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:42:17.070 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:42:17.071 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:42:17.072 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:42:17.080 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:42:17.081 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:42:17.083 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:42:17.088 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:42:17.091 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:42:17.092 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:42:17.093 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:42:17.094 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:42:17.095 +08:00 [INF] Executed action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 57.2019ms.
+2018-08-25 00:42:17.098 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2018-08-25 00:42:17.100 +08:00 [DBG] No information found on request to perform content negotiation.
+2018-08-25 00:42:17.101 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2018-08-25 00:42:17.102 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2018-08-25 00:42:17.103 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+2018-08-25 00:42:17.104 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2018-08-25 00:42:17.106 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 116.0323ms
+2018-08-25 00:42:17.111 +08:00 [DBG] Connection id "0HLG9S1THE1A6" completed keep alive response.
+2018-08-25 00:42:17.113 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:42:17.114 +08:00 [INF] Request finished in 139.7695ms 200 application/json; charset=utf-8
+2018-08-25 00:42:35.299 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts/1  
+2018-08-25 00:42:35.300 +08:00 [DBG] Request successfully matched the route with name 'null' and template 'api/posts/{id}'.
+2018-08-25 00:42:35.307 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi)
+2018-08-25 00:42:35.308 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2018-08-25 00:42:35.310 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:42:35.312 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"]
+2018-08-25 00:42:35.314 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2018-08-25 00:42:35.316 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2018-08-25 00:42:35.318 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2018-08-25 00:42:35.320 +08:00 [DBG] Attempting to bind model of type 'System.Int32' using the name 'id' in request data ...
+2018-08-25 00:42:35.321 +08:00 [DBG] Done attempting to bind model of type 'System.Int32' using the name 'id'.
+2018-08-25 00:42:35.323 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2018-08-25 00:42:35.325 +08:00 [DBG] Attempting to bind parameter 'fields' of type 'System.String' ...
+2018-08-25 00:42:35.326 +08:00 [DBG] Could not find a value in the request with name '' of type 'System.String'.
+2018-08-25 00:42:35.326 +08:00 [DBG] Done attempting to bind model of type 'System.String' using the name ''.
+2018-08-25 00:42:35.327 +08:00 [DBG] Done attempting to bind parameter 'fields' of type 'System.String'.
+2018-08-25 00:42:35.331 +08:00 [INF] Executing action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) with arguments (["1",""]) - Validation state: "Valid"
+2018-08-25 00:42:35.339 +08:00 [INF] Entity Framework Core 2.1.2-rtm-30932 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-08-25 00:42:35.359 +08:00 [DBG] Compiling query model: 
+'(from Post e in DbSet<Post>
+where Property([e], "Id") == __get_Item_0
+select [e]).FirstOrDefault()'
+2018-08-25 00:42:35.379 +08:00 [DBG] Optimized query model: 
+'(from Post e in DbSet<Post>
+where Property([e], "Id") == __get_Item_0
+select [e]).FirstOrDefault()'
+2018-08-25 00:42:35.435 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<Post> _InterceptExceptions(
+    source: IAsyncEnumerable<Post> _TrackEntities(
+        results: IAsyncEnumerable<Post> _ToSequence(() => Task<Post> FirstOrDefault(
+                source: IAsyncEnumerable<Post> _ShapedQuery(
+                    queryContext: queryContext, 
+                    shaperCommandContext: SelectExpression: 
+                        SELECT TOP(1) [e].[Id], [e].[Author], [e].[Body], [e].[LastModified], [e].[Remark], [e].[Title]
+                        FROM [Posts] AS [e]
+                        WHERE [e].[Id] = @__get_Item_0, 
+                    shaper: BufferedEntityShaper<Post>), 
+                cancellationToken: queryContext.CancellationToken)), 
+        queryContext: queryContext, 
+        entityTrackingInfos: { itemType: Post }, 
+        entityAccessors: List<Func<Post, object>> 
+        { 
+            Func<Post, Post>, 
+        }
+    ), 
+    contextType: RayBlog.Infrastructure.Database.MyContext, 
+    logger: DiagnosticsLogger<Query>, 
+    queryContext: queryContext)
+2018-08-25 00:42:35.443 +08:00 [DBG] Opening connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:42:35.444 +08:00 [DBG] Opened connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:42:35.447 +08:00 [DBG] Executing DbCommand [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Author], [e].[Body], [e].[LastModified], [e].[Remark], [e].[Title]
+FROM [Posts] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2018-08-25 00:42:35.450 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Author], [e].[Body], [e].[LastModified], [e].[Remark], [e].[Title]
+FROM [Posts] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2018-08-25 00:42:35.470 +08:00 [DBG] A data reader was disposed.
+2018-08-25 00:42:35.471 +08:00 [DBG] Closing connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:42:35.472 +08:00 [DBG] Closed connection to database 'RayBlog' on server 'Localhost\Dev'.
+2018-08-25 00:42:35.476 +08:00 [DBG] Context 'Post' started tracking 'MyContext' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2018-08-25 00:42:35.490 +08:00 [INF] Executed action method RayBlog.APi.Controllers.PostController.Get (RayBlog.APi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 156.1155ms.
+2018-08-25 00:42:35.493 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2018-08-25 00:42:35.497 +08:00 [DBG] No information found on request to perform content negotiation.
+2018-08-25 00:42:35.498 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2018-08-25 00:42:35.499 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2018-08-25 00:42:35.501 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+2018-08-25 00:42:35.502 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Dynamic.ExpandoObject'.
+2018-08-25 00:42:35.506 +08:00 [INF] Executed action RayBlog.APi.Controllers.PostController.Get (RayBlog.APi) in 188.4447ms
+2018-08-25 00:42:35.508 +08:00 [DBG] Connection id "0HLG9S1THE1A6" completed keep alive response.
+2018-08-25 00:42:35.511 +08:00 [DBG] 'MyContext' disposed.
+2018-08-25 00:42:35.513 +08:00 [INF] Request finished in 214.8785ms 200 application/json; charset=utf-8
+2018-08-25 00:42:38.042 +08:00 [DBG] Connection id "0HLG9S1THE1A5" received FIN.
+2018-08-25 00:42:38.044 +08:00 [DBG] Connection id "0HLG9S1THE1A5" disconnecting.
+2018-08-25 00:42:38.046 +08:00 [DBG] Connection id "0HLG9S1THE1A5" sending FIN.
+2018-08-25 00:42:38.075 +08:00 [DBG] Connection id "0HLG9S1THE1A5" stopped.
+2018-08-25 00:43:56.970 +08:00 [DBG] Hosting shutdown
+2018-08-25 00:43:56.991 +08:00 [DBG] Connection id "0HLG9S1THE1A2" disconnecting.
+2018-08-25 00:43:56.991 +08:00 [DBG] Connection id "0HLG9S1THE1A4" disconnecting.
+2018-08-25 00:43:57.006 +08:00 [DBG] Connection id "0HLG9S1THE1A6" disconnecting.
+2018-08-25 00:43:57.007 +08:00 [DBG] Connection id "0HLG9S1THE1A4" sending FIN.
+2018-08-25 00:43:57.006 +08:00 [DBG] Connection id "0HLG9S1THE1A2" sending FIN.
+2018-08-25 00:43:57.014 +08:00 [DBG] Connection id "0HLG9S1THE1A6" sending FIN.
+2018-08-25 00:43:57.016 +08:00 [DBG] Connection id "0HLG9S1THE1A2" stopped.
+2018-08-25 00:43:57.048 +08:00 [DBG] Connection id "0HLG9S1THE1A6" stopped.
+2018-08-25 00:43:57.048 +08:00 [DBG] Connection id "0HLG9S1THE1A4" stopped.
